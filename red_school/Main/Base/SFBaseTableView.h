@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SFBaseTableView.h
 //  red_school
 //
 //  Created by Meeno on 2018/9/29.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface SFBaseTableView : UITableView
 
 @end
-

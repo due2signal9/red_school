@@ -9,7 +9,55 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-// Include any system framework and library headers here that should be included in all compilation units.
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+//判断iPhonex
+#define NORMAL_NAVIBAR_HEIGHT 44.0
+#define IPHONEX_NAVIBAR_HEIGHT 88.0
+#define NORMAL_TABBAR_HEIGHT 49.0
+#define IPHONEX_TABBAR_HEIGHT 83.0
+#define kIsiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+#define SF_NAVIBAR_HEIGHT (kIsiPhoneX?IPHONEX_NAVIBAR_HEIGHT:NORMAL_NAVIBAR_HEIGHT)
+#define SF_TABBAR_HEIGHT (kIsiPhoneX?IPHONEX_TABBAR_HEIGHT:NORMAL_TABBAR_HEIGHT)
+
+//开发临时用
+#define IS_DEV_SERVER 1
+
+//一些宏定义
+#define SFWeakSelf(ws)  __weak __typeof(&*self)ws = self;
+#define SFStrongSelf(ws)  __strong __typeof(&*self)ws = self;
+#define SFLocalizedString(key) [SFLocalization localizedStringWithKey:(key)]
+
+#define SF_HW_RATIO (667.0/375.0)
+
+//RELATIVE ABSOLUTE 用于区分横屏下的绝对长宽
+#define SF_RELATIVE_SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define SF_RELATIVE_SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+
+#define SF_ABSOLUTE_SCREEN_WIDTH (SF_RELATIVE_SCREEN_WIDTH < SF_RELATIVE_SCREEN_HEIGHT ? SF_RELATIVE_SCREEN_WIDTH : SF_RELATIVE_SCREEN_HEIGHT)
+#define SF_ABSOLUTE_SCREEN_HEIGHT (SF_RELATIVE_SCREEN_WIDTH > SF_RELATIVE_SCREEN_HEIGHT ? SF_RELATIVE_SCREEN_WIDTH : SF_RELATIVE_SCREEN_HEIGHT)
+
+//判断设备
+#define SF_IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define SF_IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+
+//判断真机或模拟器
+#if (TARGET_IPHONE_SIMULATOR) //模拟器
+#define SF_IS_SIMULATOR 1
+#else //真机
+#define SF_IS_SIMULATOR 0
+#endif
+
+#import "AppDelegate+SFRegister.h"
+#import "AppDelegate+SFSetup.h"
+#import "SFCommon.h"
+#import "SFNotice.h"
+#import "SFBaseTableView.h"
+#import "SFBaseViewController.h"
+#import "SFNavigationController.h"
+#import <YYKit.h>
+#import <Masonry/Masonry.h>
+#import <MJRefresh/MJRefresh.h>
+#import "SFUser.h"
+#import "SFBarButtonItem.h"
+#import "Localization/SFLocalization.h"
 
 #endif /* PrefixHeader_pch */

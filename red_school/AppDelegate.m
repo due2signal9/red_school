@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "SFAppManager.h"
+#import <UserNotifications/UserNotifications.h>
 
 @interface AppDelegate ()
 
@@ -16,10 +18,24 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [window setBackgroundColor:[UIColor whiteColor]];
+    [self setWindow:window];
+    [[self window] makeKeyWindow];
+    
+    [SFAppManager setup];
+    
+    [self pre_config];
+
     return YES;
 }
 
+- (void)pre_config {
+    
+    [self registerUmeng];
+    [self setupReachability];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
