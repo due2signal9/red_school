@@ -7,6 +7,7 @@
 //
 
 #import "SFAppManager.h"
+#import "SFLoginViewController.h"
 
 static SFAppManager *_instance = nil;
 
@@ -52,6 +53,19 @@ static SFAppManager *_instance = nil;
 - (void)loadRootViewController
 {
     
+    BOOL isLogin = false;
+    
+    if (isLogin)
+    {
+        
+        
+    }
+    else
+    {
+        
+        SFLoginViewController *login_vc = [[SFLoginViewController alloc] init];
+        [[self keyWindow] setRootViewController:login_vc];
+    }
     //NSNumber *choosedSchool = [[NSUserDefaults standardUserDefaults] objectForKey:@"SF_CHOOSED_SCHOOL"];
     
     //SFTabBarController *hRoot = [[SFTabBarController alloc] init];

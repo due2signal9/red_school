@@ -7,6 +7,8 @@
 //
 
 #import "SFRootTabBarController.h"
+#import "SFNavigationController.h"
+#import "SFLoginViewController.h"
 
 @interface SFRootTabBarController ()
 
@@ -16,7 +18,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+//    SFLoginViewController *login_vc = [[SFLoginViewController alloc] init];
+//    [self setViewControllers:@[login_vc]];
 }
 
 - (void)didReceiveMemoryWarning {

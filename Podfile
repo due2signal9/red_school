@@ -14,4 +14,5 @@ target 'red_school' do
 	pod 'MJRefresh'
 	pod 'TSMessages'
 	pod 'FMDB'
+	pod 'BlocksKit'
 end

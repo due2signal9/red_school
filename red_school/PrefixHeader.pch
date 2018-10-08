@@ -56,6 +56,7 @@
 #import <YYKit.h>
 #import <Masonry/Masonry.h>
 #import <MJRefresh/MJRefresh.h>
+#import <UIAlertView+BlocksKit.h>
 #import "SFUser.h"
 #import "SFBarButtonItem.h"
 #import "Localization/SFLocalization.h"

@@ -38,6 +38,8 @@
 		FA2DD96A215F69C0003F1ED1 /* SFBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2DD969215F69C0003F1ED1 /* SFBarButtonItem.m */; };
 		FA2DD96D215F69F3003F1ED1 /* SFRootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2DD96C215F69F3003F1ED1 /* SFRootTabBarController.m */; };
 		FA2DD970215F6A07003F1ED1 /* SFNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2DD96F215F6A07003F1ED1 /* SFNavigationController.m */; };
+		FA45B90B216B42E8000FE5BC /* SFLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA45B90A216B42E8000FE5BC /* SFLoginViewController.m */; };
+		FA45B90E216B440E000FE5BC /* SFHttpApiLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = FA45B90D216B440E000FE5BC /* SFHttpApiLogin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +122,10 @@
 		FA2DD96C215F69F3003F1ED1 /* SFRootTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFRootTabBarController.m; sourceTree = "<group>"; };
 		FA2DD96E215F6A07003F1ED1 /* SFNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFNavigationController.h; sourceTree = "<group>"; };
 		FA2DD96F215F6A07003F1ED1 /* SFNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFNavigationController.m; sourceTree = "<group>"; };
+		FA45B909216B42E8000FE5BC /* SFLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFLoginViewController.h; sourceTree = "<group>"; };
+		FA45B90A216B42E8000FE5BC /* SFLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFLoginViewController.m; sourceTree = "<group>"; };
+		FA45B90C216B440E000FE5BC /* SFHttpApiLogin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFHttpApiLogin.h; sourceTree = "<group>"; };
+		FA45B90D216B440E000FE5BC /* SFHttpApiLogin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFHttpApiLogin.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,6 +328,7 @@
 		FA2DD952215F68D3003F1ED1 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				FA45B904216B428E000FE5BC /* MVC */,
 				FA2DD971215F6A0D003F1ED1 /* Api */,
 				FA2DD95B215F692E003F1ED1 /* Root */,
 				FA2DD957215F690B003F1ED1 /* Base */,
@@ -372,8 +379,43 @@
 		FA2DD971215F6A0D003F1ED1 /* Api */ = {
 			isa = PBXGroup;
 			children = (
+				FA45B90C216B440E000FE5BC /* SFHttpApiLogin.h */,
+				FA45B90D216B440E000FE5BC /* SFHttpApiLogin.m */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		FA45B904216B428E000FE5BC /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				FA45B908216B42BA000FE5BC /* View */,
+				FA45B907216B42B5000FE5BC /* Model */,
+				FA45B906216B429C000FE5BC /* Controller */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		FA45B906216B429C000FE5BC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA45B909216B42E8000FE5BC /* SFLoginViewController.h */,
+				FA45B90A216B42E8000FE5BC /* SFLoginViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA45B907216B42B5000FE5BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA45B908216B42BA000FE5BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -600,8 +642,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA2DD931215F67D8003F1ED1 /* SFHttpService.m in Sources */,
+				FA45B90E216B440E000FE5BC /* SFHttpApiLogin.m in Sources */,
 				FA2DD96A215F69C0003F1ED1 /* SFBarButtonItem.m in Sources */,
 				FA2DD950215F6853003F1ED1 /* SFCommon.m in Sources */,
+				FA45B90B216B42E8000FE5BC /* SFLoginViewController.m in Sources */,
 				FA2DD956215F68F8003F1ED1 /* SFAppManager.m in Sources */,
 				FA2DD939215F67E8003F1ED1 /* SFServer.m in Sources */,
 				FA2DD95A215F6922003F1ED1 /* SFBaseViewController.m in Sources */,
