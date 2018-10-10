@@ -8,6 +8,7 @@
 
 #import "SFAppManager.h"
 #import "SFLoginViewController.h"
+#import "SFRootTabBarController.h"
 
 static SFAppManager *_instance = nil;
 
@@ -53,12 +54,13 @@ static SFAppManager *_instance = nil;
 - (void)loadRootViewController
 {
     
-    BOOL isLogin = false;
+    BOOL isGo = false;
     
-    if (isLogin)
+    if (isGo)
     {
         
-        
+        SFRootTabBarController *root = [[SFRootTabBarController alloc] init];
+        [[self keyWindow] setRootViewController:root];
     }
     else
     {
@@ -66,24 +68,6 @@ static SFAppManager *_instance = nil;
         SFLoginViewController *login_vc = [[SFLoginViewController alloc] init];
         [[self keyWindow] setRootViewController:login_vc];
     }
-    //NSNumber *choosedSchool = [[NSUserDefaults standardUserDefaults] objectForKey:@"SF_CHOOSED_SCHOOL"];
-    
-    //SFTabBarController *hRoot = [[SFTabBarController alloc] init];
-    //[[self keyWindow] setRootViewController:hRoot];
-//    int exist = [[[SFUser shared] user_id] intValue];
-//    if ( exist )
-//    {
-//
-//        SFHomeViewController *home = [[SFHomeViewController alloc] init];
-//        [[self keyWindow] setRootViewController:home];
-//    }
-//    else
-//    {
-//
-//        SFLoginViewController *lvc = [[SFLoginViewController alloc] init];
-//        SFNavigationController *nav = [[SFNavigationController alloc] initWithRootViewController:lvc];
-//        [[self keyWindow] setRootViewController:nav];
-//    }
 }
 
 - (void)logout {

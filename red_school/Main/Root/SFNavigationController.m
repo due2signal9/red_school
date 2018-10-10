@@ -16,7 +16,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self pre_config];
+}
+
+- (void)pre_config {
+    
+    [[self navigationBar] setBackgroundColor:[UIColor whiteColor]];
+    [[self navigationBar] setTranslucent:NO];
+    [[self navigationBar] setTitleTextAttributes:@{
+                                                   NSFontAttributeName:[UIFont fontWithName:@"PingFangSC-Ultralight" size:17],
+                                                   NSForegroundColorAttributeName:[UIColor blackColor]
+                                                   }];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,7 +8,8 @@
 
 #import "SFRootTabBarController.h"
 #import "SFNavigationController.h"
-#import "SFLoginViewController.h"
+#import "SFHomeViewController.h"
+#import "SFMineViewController.h"
 
 @interface SFRootTabBarController ()
 
@@ -19,8 +20,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    SFLoginViewController *login_vc = [[SFLoginViewController alloc] init];
-//    [self setViewControllers:@[login_vc]];
+    [[self tabBar] setTranslucent:NO];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{
+                                                        NSFontAttributeName:[UIFont fontWithName:@"PingFangSC-Ultralight" size:11.0],
+                                                        NSForegroundColorAttributeName:[UIColor blackColor]
+                                                        } forState:UIControlStateNormal];
+    
+    SFHomeViewController *homeVC = [[SFHomeViewController alloc] init];
+    SFNavigationController *homeNAV = [[SFNavigationController alloc] initWithRootViewController:homeVC];
+    [[homeNAV tabBarItem] setTitle:@"home"];
+    
+    SFMineViewController *mineVC = [[SFMineViewController alloc] init];
+    SFNavigationController *mineNAV = [[SFNavigationController alloc] initWithRootViewController:mineVC];
+    [[mineNAV tabBarItem] setTitle:@"mine"];
+    
+    [self setViewControllers:@[homeNAV, mineNAV]];
 }
 
 - (void)didReceiveMemoryWarning {

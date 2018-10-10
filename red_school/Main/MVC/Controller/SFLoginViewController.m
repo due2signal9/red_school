@@ -8,6 +8,8 @@
 
 #import "SFLoginViewController.h"
 #import "SFHttpApiLogin.h"
+#import "SFAppManager.h"
+#import "SFRootTabBarController.h"
 
 @interface SFLoginViewController ()
 
@@ -26,10 +28,11 @@
 - (void)initSubviews {
     
     UIButton *loginBtn = [[UIButton alloc] init];
+    [loginBtn setBackgroundColor:[[UIColor redColor] colorWithAlphaComponent:0.5]];
     [[self view] addSubview:loginBtn];
     [loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
        
-        make.width.height.mas_equalTo(44.0);
+        make.width.height.mas_equalTo(100.0);
         make.center.equalTo(self.view);
     }];
     
@@ -39,21 +42,25 @@
 
 - (void)loginBtnClicked {
     
+    UIWindow *keyWindow = [[SFAppManager shared] keyWindow];
+    [keyWindow setRootViewController:[[SFRootTabBarController alloc] init]];
+    return;
     if (self->_isLogining == YES)
     {
         NSLog(@"UNDERGOING!!!");
         return;
     }
     //开始登录
+    self->_isLogining = YES;
     SFHttpApiLogin *api = [[SFHttpApiLogin alloc] init];
     [api requestAsyncWithReturend:^(id response) {
         
-        UIAlertView *alert = [UIAlertView bk_alertViewWithTitle:@"Tip" message:@"login success"];
+        UIAlertView *alert = [UIAlertView bk_showAlertViewWithTitle:@"Tip" message:@"login success" cancelButtonTitle:@"cancel" otherButtonTitles:nil handler:nil];
         [alert show];
         self->_isLogining = NO;
     } withProgress:nil withError:^(NSError *error) {
         
-        UIAlertView *alert = [UIAlertView bk_alertViewWithTitle:@"Tip" message:@"login fail"];
+        UIAlertView *alert = [UIAlertView bk_showAlertViewWithTitle:@"Tip" message:@"login fail" cancelButtonTitle:@"cancel" otherButtonTitles:nil handler:nil];
         [alert show];
         self->_isLogining = NO;
     }];
