@@ -20,11 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[self tabBar] setTranslucent:NO];
-    [[UITabBarItem appearance] setTitleTextAttributes:@{
-                                                        NSFontAttributeName:[UIFont fontWithName:@"PingFangSC-Ultralight" size:11.0],
-                                                        NSForegroundColorAttributeName:[UIColor blackColor]
-                                                        } forState:UIControlStateNormal];
+    [self pre_config];
     
     SFHomeViewController *homeVC = [[SFHomeViewController alloc] init];
     SFNavigationController *homeNAV = [[SFNavigationController alloc] initWithRootViewController:homeVC];
@@ -35,6 +31,15 @@
     [[mineNAV tabBarItem] setTitle:@"mine"];
     
     [self setViewControllers:@[homeNAV, mineNAV]];
+}
+
+- (void)pre_config {
+    
+    [[self tabBar] setTranslucent:NO];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{
+                                                        NSFontAttributeName:[UIFont fontWithName:@"PingFangSC-Ultralight" size:11.0],
+                                                        NSForegroundColorAttributeName:[UIColor blackColor]
+                                                        } forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning {

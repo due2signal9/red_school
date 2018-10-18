@@ -16,7 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self pre_config];
+}
+
+- (void)pre_config {
+    
+    [[self view] setBackgroundColor:[UIColor colorWithHexString:@"f8f8f8"]];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -18,7 +18,6 @@
     [super viewDidLoad];
     
     [self setTitle:@"mine"];
-    [[self view] setBackgroundColor:[UIColor redColor]];
 }
 
 - (void)didReceiveMemoryWarning {

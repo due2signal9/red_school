@@ -24,9 +24,14 @@
     
     [[self navigationBar] setBackgroundColor:[UIColor whiteColor]];
     [[self navigationBar] setTranslucent:NO];
+    //设置阴影
+    NSShadow *shadow = [[NSShadow alloc] init];
+    shadow.shadowColor = [UIColor whiteColor];
+    shadow.shadowOffset = CGSizeMake(0, 0);
     [[self navigationBar] setTitleTextAttributes:@{
                                                    NSFontAttributeName:[UIFont fontWithName:@"PingFangSC-Ultralight" size:17],
-                                                   NSForegroundColorAttributeName:[UIColor blackColor]
+                                                   NSForegroundColorAttributeName:[UIColor blackColor],
+                                                   NSShadowAttributeName:shadow
                                                    }];
 }
 

@@ -132,6 +132,8 @@
 		FA45B910216C8586000FE5BC /* SFHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFHomeViewController.m; sourceTree = "<group>"; };
 		FA45B912216C8592000FE5BC /* SFMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFMineViewController.h; sourceTree = "<group>"; };
 		FA45B913216C8592000FE5BC /* SFMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFMineViewController.m; sourceTree = "<group>"; };
+		FA45B915216F2841000FE5BC /* SFNaviBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFNaviBarView.h; sourceTree = "<group>"; };
+		FA45B916216F2841000FE5BC /* SFNaviBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFNaviBarView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -424,6 +426,8 @@
 		FA45B908216B42BA000FE5BC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FA45B915216F2841000FE5BC /* SFNaviBarView.h */,
+				FA45B916216F2841000FE5BC /* SFNaviBarView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -676,6 +680,7 @@
 				FA2DD927215F67AD003F1ED1 /* AppDelegate+SFSetup.m in Sources */,
 				FA45B911216C8586000FE5BC /* SFHomeViewController.m in Sources */,
 				FA2DD8EE215F6467003F1ED1 /* AppDelegate.m in Sources */,
+				FA45B917216F2841000FE5BC /* SFNaviBarView.m in Sources */,
 				FA2DD96D215F69F3003F1ED1 /* SFRootTabBarController.m in Sources */,
 				FA2DD926215F67AD003F1ED1 /* AppDelegate+SFRegister.m in Sources */,
 			);

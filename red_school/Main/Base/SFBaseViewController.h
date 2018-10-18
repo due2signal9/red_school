@@ -10,4 +10,6 @@
 
 @interface SFBaseViewController : UIViewController
 
+@property(nonatomic, strong) UIView *naviBar;
+
 @end
