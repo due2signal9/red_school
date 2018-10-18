@@ -42,6 +42,7 @@
 		FA45B90E216B440E000FE5BC /* SFHttpApiLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = FA45B90D216B440E000FE5BC /* SFHttpApiLogin.m */; };
 		FA45B911216C8586000FE5BC /* SFHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA45B910216C8586000FE5BC /* SFHomeViewController.m */; };
 		FA45B914216C8592000FE5BC /* SFMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA45B913216C8592000FE5BC /* SFMineViewController.m */; };
+		FA45B917216F2841000FE5BC /* SFNaviBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA45B916216F2841000FE5BC /* SFNaviBarView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
